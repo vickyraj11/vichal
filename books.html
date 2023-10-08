@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .banner{
+            width: 100%;
+            height: 100vh;
+            background-image: url(books-libros.gif);
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar{
+            background: linear-gradient(to right,black,rgb(70, 67, 67),rgb(45, 45, 45),black);
+            position: fixed;
+            width: 100%;                                               
+            padding: 35px 0;
+            margin: auto;
+            display: flex;
+            align-items:end;
+            justify-content: space-between;              
+            font-size: large;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar ul li::after{
+            content:'';
+            height: 3px;
+            width: 0;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+
+        }
+        .navbar ul li:hover::after{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1{
+            font-size: 70px;
+            margin-top: 80px;
+        }
+        button{
+            width: 250px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 3px solid #009688;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 1s;
+         
+        }
+        span{
+            background: #009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 1s;
+           
+        }
+        button:hover{
+            box-shadow: 18px 20px 10px black;
+        }
+        button:hover span{
+        
+         width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
+       
+        .bigbox{
+            background-image: url(3d-render-spotlights-grunge-brick-wall.jpg);
+
+            background-size: cover;
+        }
+        .book {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+           
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        button{
+            border: 2px solid rgb(228, 227, 227);
+            border-radius: 5px;
+            box-shadow: 9px 6px 10px rgb(146, 141, 141);
+            color: #fff;
+        }
+
+        .box {
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            background-image: url(wall.jpeg);
+            background-size: cover;
+            margin: 10px;
+        }
+        #box1{
+            background-image: url(time_management.jpg);
+            background-size: cover;
+        }
+        #box2{
+            background-image: url(war_and_peace.jpg);
+            background-size: cover;
+        }
+        #box3{
+            background-image: url(law_of_love.jpg);
+            background-size: cover;
+        }
+        #box4{
+            background-image: url(crime_and_punisment.jpg);
+            background-size: cover;
+        }
+        #box5{
+            background-image: url(critique_of_pure_author.jpg);
+            background-size: cover;
+        }
+        #box6{
+            background-image: url(budha_and_his_teachiings.jpg);
+            background-size: cover;
+        }
+        #box7{
+            background-image: url(invisible_man2.jpg);
+            background-size: cover;
+        }
+        #box8{
+            background-image: url(the\ light\ that\ failed.jfif);
+            background-size: cover;
+        }
+
+        .button {
+            width: 100px;
+            height: 20px;
+        }
+
+        /* Add space between columns */
+        table {
+            border-spacing: 20px;
+            width: 650px;
+            
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+   </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+         
+     </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+        <div class="banner">
+            <div class="navbar">
+                <ul>
+                    <li><a href="homes.html">HOME</a></li>
+                    <li><a href="books.html">BOOKS</a></li>
+                    <li><a href="quotes.html">QUOTES</a></li>
+                    <li><a href="game.html">GAMES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                   
+                </ul>
+            </div>
+            <div class="content">
+                
+                <div>
+                    <button type="button"><span></span><a href="#bookssection" style="color: #fff;">BOOKS DOWNLOAD</a></button>
+                  
+                </div>
+            </div>
+        </div>
+      
+        <div class="container">
+            //FIRST ROW
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="invisible_man2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="law_of_love.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="budha_and_his_teachiings.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        
+               //SECOND ROW
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="crime_and_punisment.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="nikhil1.jfif" class="btn btn-primary">DOWNLOAD</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="critique_of_pure_author.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="daniel-mingook-kim-UXR--t8CZ1U-unsplash.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                //THIRD ROW
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="time management.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="war_and_peace.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card custom-card" style="width: 18rem;">
+                            <img class="card-img-top" src="war_and_peace.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+        
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.4/dist/umd/popper.min.js"></script>
+        
+        
+        
+        
+</body>
+</html>

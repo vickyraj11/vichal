@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            background-image: url(quotes_backhround.jpeg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            background: linear-gradient(to right,black,rgb(70, 67, 67),rgb(45, 45, 45),black);
+            position: fixed;
+            width: 100%;
+            height: 25px;
+            padding: 20px 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: large;
+        }
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #0be4b5;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            width: 350px;
+            height: 350px;
+            font-size: xx-large;
+            border-radius: 35px;
+            border: 3px solid black;
+            background-image: url(wall.jpeg);
+            background-size: cover;
+            margin-top: 40px;
+            margin-top: 125px;
+            box-shadow: 25px 20px 18px black;
+        }
+        #quotes {
+            background-color: rgb(236, 236, 241);
+            box-shadow: 20px 19px 8px black;
+            border-radius: 15px;
+            position: fixed;
+            width: 320px;
+            height: 150px;
+        }
+        .button {
+            margin-top: 250px;
+            box-shadow: 10px 12px 20px black;
+            font-weight: 500;
+            position: fixed;
+        }
+        button {
+            height: 40px;
+            width: 120px;
+            border: 2.5px solid black;
+            border-radius: 25px;
+            box-shadow: 8px 10px 10px black;
+            font-weight: 300;
+            transition: 2s;
+            position: fixed;
+        }
+        button:hover {
+            box-shadow: 35px 30px 5px black;
+            
+            color: rgb(3, 3, 3);
+           
+        }
+    </style>
+     <link rel="icon" href="union.jpg" type="icon">
+    <title>Quote</title>
+</head>
+<body onload="generateQuote()">
+    <div class="navbar">
+        <ul>
+            <li><a href="homes.html">HOME</a></li>
+            <li><a href="books.html">BOOKS</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="game.html">GAME</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div id="quotes"></div>
+        <div class="button">
+            <button onclick="generateQuote()">Generate New Quote</button>
+        </div>
+    </div>
+    <script>
+        const quotes = ["Never Give up", "do and die","Work hard, dream big, achieve more.",
+"Success begins with a single step.",
+"Chase goals, catch dreams, achieve success.",
+"Dream, believe, achieve, repeat.",
+"Dare to be different, find success.",
+"Believe, achieve, succeed, exceed.",
+"Success: earned, not given.",
+"Success favors the persistent and determined.",
+"Create, conquer, succeed, repeat.",
+"Stay focused, never settle, achieve greatness.",
+"Strive, thrive, conquer, succeed.",
+"Dream it, work it, achieve it.",
+"Small steps, big dreams, great success.",
+"Success comes from hard work, not luck.",
+"Success: effort in every step.",
+"Bold actions lead to remarkable success.",
+"Work smart, hustle hard, achieve more.",
+"Every challenge is a stepping stone.",
+"Passion fuels progress, fuels success.",
+"Failures build the staircase to success.",
+"Action, persistence, courage: keys to success.",
+"Dream big, work hard, achieve greatness.",
+"Success: journey of a thousand steps.",
+"Success: passion and perseverance combined.",
+"Dream, plan, execute, achieve, celebrate."];
+        function generateQuote(){
+            const quote2 = document.getElementById("quotes");
+            const randomNo = Math.floor(Math.random() * quotes.length);
+            quote2.textContent = '" ' + quotes[randomNo] + ' "';
+        }
+    </script>
+</body>
+</html>
